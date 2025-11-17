@@ -8,11 +8,15 @@
 
 name: Deno
 
+# Disabled: This project uses Node.js/HTML/CSS/JS, not Deno
+# on:
+#   push:
+#     branches: ["main"]
+#   pull_request:
+#     branches: ["main"]
+
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
