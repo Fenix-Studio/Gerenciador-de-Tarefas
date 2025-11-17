@@ -1,0 +1,14 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Gerenciador de tarefas simples (HTML/CSS/JS)",
+  "scripts": {
+    "start": "npx serve -s . -l 5000",
+    "test": "node test/run-tests.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdom": "^27.2.0"
+  }
+}

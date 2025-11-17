@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Gerenciador de Tarefas</h1>
+    <p class="lead">Adicione, marque como concluída e remova tarefas — acessível e responsivo.</p>
+  </header>
+
+  <main class="container" id="main" role="main">
+    <section aria-labelledby="add-task-title" class="add-task">
+      <h2 id="add-task-title">Adicionar nova tarefa</h2>
+      <form id="task-form" aria-describedby="form-help">
+        <label for="task-input">Tarefa</label>
+        <div class="form-row">
+          <input id="task-input" name="task" type="text" placeholder="Descreva a tarefa" aria-required="true">
+          <button type="submit" id="add-btn" class="btn-primary">Adicionar</button>
+        </div>
+        <p id="form-help" class="sr-only">Digite a tarefa e pressione Adicionar.</p>
+      </form>
+    </section>
+
+    <section aria-labelledby="tasks-title" class="tasks-section">
+      <h2 id="tasks-title">Minhas tarefas</h2>
+      <div class="task-controls" role="region" aria-label="Controles de tarefas">
+        <div class="filters" role="tablist" aria-label="Filtrar tarefas">
+          <button class="filter-btn" data-filter="all" aria-pressed="true">Todas</button>
+          <button class="filter-btn" data-filter="active">Ativas</button>
+          <button class="filter-btn" data-filter="completed">Concluídas</button>
+        </div>
+        <div class="task-count" aria-live="polite" id="live-region">0 tarefas</div>
+      </div>
+
+      <ul id="task-list" class="task-list" role="list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Feito com atenção à acessibilidade.</p>
+  </footer>
+
+  <script src="src/app.js" defer></script>
+</body>
+</html>
